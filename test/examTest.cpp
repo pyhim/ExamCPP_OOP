@@ -32,7 +32,7 @@ namespace Exam {
         };
 
         for (const auto participant : participants) {
-            size_t i = 0;using ranges::for_each;
+            size_t i = 0;
             for (const auto obstacle : obstacles) {
                 if (participant->overcomeObstacle(*obstacle)) {
                     cout << format(
@@ -49,8 +49,8 @@ namespace Exam {
                 ) << '\n';
                 break;
             }
+            cout << "Next contestant!" << endl;
         }
-        cout << endl;
 
         ranges::for_each(participants, [](const AbstractParticipant* p) {delete p;});
         ranges::for_each(obstacles, [](const Obstacle* o) {delete o;});

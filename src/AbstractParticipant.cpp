@@ -16,12 +16,14 @@ namespace Exam {
     bool AbstractParticipant::jump(const Obstacle& o) const {
         if (o.getSize() > this->jumpLimit) return false;
 
+        cout << "Jumping!" << endl;
         return true;
     }
 
     bool AbstractParticipant::sprint(const Obstacle& o) const {
         if (o.getSize() > this->sprintLimit) return false;
 
+        cout << "Sprinting!" << endl;
         return true;
     }
 
